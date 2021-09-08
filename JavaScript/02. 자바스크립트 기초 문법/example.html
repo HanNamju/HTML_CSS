@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>적정 체중 구하기</title>
+</head>
+<body>
+    <script>
+        var weight = prompt("당신의 몸무게는 ? ", "");
+        var height = prompt("당신의 키는? ", "");
+        var righweight;
+        var pluse;
+
+        righweight = (height-100)*0.9;
+        document.write("신장 : "+height+" (cm) <br>");
+        document.write("체중 : "+weight + " (kg)<br>");
+        document.write("적정 체중 : (" + height +"-100) X 0.9 = "+righweight+"(kg) <br>");
+
+        if(righweight<weight){
+            plus = (weight-righweight);
+            document.write("적정체중은 "+righweight+"이며, 현재 적정 체중에서 "+plus+"(kg) 초과하였습니다.")
+        }else{
+            plus = (righweight - weight);
+            document.write("적정체중은 "+righweight+"이며, 현재저 적정 체중에서 "+plus+"(kg) 미달하였습니다.")
+        }
+    </script>
+</body>
+</html>
